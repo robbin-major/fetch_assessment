@@ -12,3 +12,10 @@ Below are instructions to get the machine up and running!
 # pip install pyyaml
 # using the link above as reference I created a user and chose programmatic access and set permissions to 'AmazonEC2FullAccess'.
 # then run the code by entering 'python ec2_fetch.py'
+
+Here are some the links I used to guild me in the right direction.
+
+https://www.youtube.com/watch?v=ijPOevW-ZOM
+https://www.youtube.com/watch?v=7Bxh2KszKks
+https://docs.aws.amazon.com/cli/v1/userguide/install-macos.html
+https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html#cli-configure-quickstart-config
