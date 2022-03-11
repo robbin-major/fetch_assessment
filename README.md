@@ -6,9 +6,9 @@ Below are instructions to get the machine up and running!
 
 
 
-# In order to launch EC2 instance from your computer make sure to install boto3, python3, awscli, and pyyaml on your terminal. The link below helped me tons!
-# https://www.ipswitch.com/blog/how-to-create-an-ec2-instance-with-python
-# pip install awscli boto3
-# pip install pyyaml
-# using the link above as reference I created a user and chose programmatic access and set permissions to 'AmazonEC2FullAccess'.
-# then run the code by entering 'python ec2_fetch.py'
+ In order to launch EC2 instance from your computer make sure to install boto3, python3, awscli, and pyyaml on your terminal. The link below helped me tons!
+ https://www.ipswitch.com/blog/how-to-create-an-ec2-instance-with-python
+ pip install awscli boto3
+ pip install pyyaml
+ using the link above as reference I created a user and chose programmatic access and set permissions to 'AmazonEC2FullAccess'.
+then run the code by entering 'python ec2_fetch.py'# sorting_hat_quiz
