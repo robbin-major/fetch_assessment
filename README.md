@@ -1,21 +1,41 @@
 # fetch_assessment
 
-Greetings! I was able to get the machine up and running but was having problems sshing into the machine because of the port and the user1 and user2 public keys. I commented out the key.pem because I kept snagging an error. I'm still learning and would love to learn more, hopefully with this apprenticeship! 
+Greetings! 
 
-Below are instructions to get the machine up and running!
+This project aims to develop an automated program that deploys a Linux AWS EC2 instance with two volumes and two users using a YAML configuration file.
+
+Here are some guidelines to follow:
+
+Create a YAML file based on the configuration provided below for consumption by your application
+You may modify the configuration, but do not do so to the extent that you fundamentally change the exercise
+Include the YAML config file in your repo
+Use Python and Boto3
+Do not use configuration management, provisioning, or IaC tools such as Ansible, CloudFormation, Terraform, etc.
+
+# This YAML configuration specifies a server with two volumes and two users
+  server:
+    instance_type: t2.micro
+    ami_type: amzn2
+    architecture: x86_64
+    root_device_type: ebs
+    virtualization_type: hvm
+    min_count: 1
+    max_count: 1
+    volumes:
+      - device: /dev/xvda
+        size_gb: 10
+        type: ext4
+        mount: /
+      - device: /dev/xvdf
+        size_gb: 100
+        type: xfs
+        mount: /data
+    users:
+      - login: user1
+        ssh_key: --user1 ssh public key goes here-- user1@localhost
+      - login: user2
+        ssh_key: --user2 ssh public key goes here-- user2@localhost
 
 
 
-# In order to launch EC2 instance from your computer make sure to install boto3, python3, awscli, and pyyaml on your terminal. The link below helped me tons!
-# https://www.ipswitch.com/blog/how-to-create-an-ec2-instance-with-python
-# pip install awscli boto3
-# pip install pyyaml
-# using the link above as reference I created a user and chose programmatic access and set permissions to 'AmazonEC2FullAccess'.
-# then run the code by entering 'python ec2_fetch.py'
 
-Here are some the links I used to guild me in the right direction.
-
-https://www.youtube.com/watch?v=ijPOevW-ZOM
-https://www.youtube.com/watch?v=7Bxh2KszKks
-https://docs.aws.amazon.com/cli/v1/userguide/install-macos.html
-https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html#cli-configure-quickstart-config
